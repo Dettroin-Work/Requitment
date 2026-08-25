@@ -1,7 +1,7 @@
 import React from 'react';
-import { Users, Plus, Sun, Moon, RefreshCw, Sparkles } from 'lucide-react';
+import { Users, Plus, Sun, Moon } from 'lucide-react';
 
-export default function Navbar({ theme, onToggleTheme, onOpenAddModal, onResetData }) {
+export default function Navbar({ theme, onToggleTheme, onOpenAddModal }) {
   return (
     <header className="navbar-container">
       <div className="navbar-brand">
@@ -39,15 +39,6 @@ export default function Navbar({ theme, onToggleTheme, onOpenAddModal, onResetDa
               <span>Dark Mode</span>
             </>
           )}
-        </button>
-
-        <button 
-          className="action-btn reset-btn" 
-          onClick={onResetData}
-          title="Reset to sample data"
-        >
-          <RefreshCw size={16} />
-          <span className="reset-btn-text">Reset Demo</span>
         </button>
 
         <button 

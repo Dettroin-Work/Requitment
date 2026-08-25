@@ -101,13 +101,6 @@ export default function App() {
     }
   };
 
-  const handleResetData = () => {
-    if (window.confirm('Reset candidate pipeline to default sample data?')) {
-      setCandidates(INITIAL_CANDIDATES);
-      localStorage.setItem('ats_candidates', JSON.stringify(INITIAL_CANDIDATES));
-    }
-  };
-
   const handleOpenAddModal = (stageId = '1st_interview') => {
     setCandidateToEdit(null);
     setModalInitialStage(stageId);
@@ -150,7 +143,6 @@ export default function App() {
         theme={theme}
         onToggleTheme={toggleTheme}
         onOpenAddModal={handleOpenAddModal}
-        onResetData={handleResetData}
       />
 
       {/* Dynamic 5 Metric Cards */}
